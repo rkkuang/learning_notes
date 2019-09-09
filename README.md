@@ -1,2 +1,2 @@
 # learning_notes
-Here I put my all kinds of daily learning notes/materials
+Here I put all kinds of daily learning notes/materials
