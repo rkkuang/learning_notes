@@ -1,5 +1,117 @@
 link: https://www.youtube.com/watch?v=L5TxeCwNV_4&t=940s
 
+computing and astronomy
+the future
+
+What collocting area would you need to detect galaxies at the very begining of the universe
+
+1 km -- SKA
+
+MeerKAT -- SKA pathfinder:
+N dishes, N_chan channels, N_pol polarizations
+
+N(N-1)/2 * N_chan * N_pol
+
+MeerKAT produces 65,000,000 samples (complex values) every 0.5s
+Full 8-hr track will produce 50TB data
+Typical project ~ 1000 hrs(on a sigle pointing), ~ 50 PB raw-data
+
+can do averaging, but the volume of data still quite large
+
+Importantly, in radio astronomy, we do not measure the distribution of the stuff that we actually see,
+what we measure is the representation( Fourier Transform ) of the image
+
+celestial object -> radio telescopes (Synthesized Aperture) --> Fourier Domain (UV coverage) --> Computers (very careful reconstruction of what we measured) --> image
+
+6:21 generic view of what a radio calibration pipeline looks like
+
+ARC: African Research Cloud
+
+IDIA: Inter-University Institute for Data Intensive Astronomy
+
+ARCADE
+
+Jupyter hub
+
+
+Radio Astronomy Image Analaysis
+
+
+Processing of SETI data: Citizen Science
+github.com/ibm-cds-labs/seti_at_ibm
+*Archived* - Introduction to Analyzing SETI Institute radio data using IBM Cloud database and analytic tools.
+
+
+Use spectrograms to look for signals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Brad Frank
+https://github.com/foxmouldy
+https://bradley-frank.github.io/
+Brad’s Research Blog
+
+a Radio Astronomer, working on the imaging Large Survey Projects with the MeerKAT telescope. I am the SKA Lecturer at the University of Cape Town and a Senior Researcher with the Inter-University Institute for Data Intensive Astronomy (IDIA).
+
+https://bradley-frank.github.io/2017/10/26/ast2003h-project-tips.html
+here are lots of things I want to learn
+
+
+
+https://2017.za.pycon.org/talks/23/
+At the Inter-University Institute for Data Intensive Astronomy (IDIA, www.idia.ac.za), we are focusing on several important use-cases related to the delivery of science data products from large radio telescopes, such as MeerKAT. The requirements for the hardcore processing and analysis of raw radio data has to be counter-balanced with our essential need to collaborate on our science projects. 
+
+We have thus adopted the Jupyter Hub/Notebooks as the principle means of running radio astronomy workflows, pipelines and calibration scripts. We have found this to be an enormously useful and powerful medium to prototype technical recipes, and to share lessons learned. This allows us to shorten the amount of time taken to develop a complex astronomical workflow, and shifts the focus on the data and the processes involved in a single, comprehensive framework. 
+
+The usage of Jupyter Notebooks is become quite popular in radio astronomy, and marks a distinct paradigm shift in the way that astronomers all over the world are collaborating on large science projects.
+
+In my talk I will focus on our usage of Jupyter Hub/Notebooks within an astronomical context, and some highlights related to the development of our astronomical computing software stack in python.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
