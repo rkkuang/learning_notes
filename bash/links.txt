@@ -1,0 +1,67 @@
+https://www.youtube.com/watch?v=oxuRxtrO2Ag
+Beginner's Guide to the Bash Terminal
+
+Above is not what I want, I want a tutorial to bash script coding.
+
+yet I recaped/learned these commands:
+
+file name
+locate filename
+sudo updatedb
+history
+whatis + command
+apropos + time --> list all commands related to time
+man man
+mkdir dir1 dir2 dir3
+touch file1 file2 file3
+rmdir dir (rm a empty dir)
+cat >> anewfile (ctrl + D to exit)
+more file 
+nano file2
+history | less
+sudo -s
+su - user2
+users
+id
+watch free -h
+killall firefox
+which google-chrome
+
+
+========================
+actually, I should search "sh file tutorial" or
+"shell scripting tutorial"
+https://www.youtube.com/watch?v=hwrnmQumtPw
+Shell Scripting Tutorial
+
+.vimrc:
+set number
+syntax on
+set tabstop=2
+set autoindent
+
+esc, gg --> d + G (delete all contents in a file)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
