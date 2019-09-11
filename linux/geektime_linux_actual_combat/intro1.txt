@@ -1,0 +1,240 @@
+极客时间, linux系统实战
+尹会生
+https://www.bilibili.com/video/av65533024/?p=1
+
+5 distributions
+
+Redhat, Fedora, Centos
+Debian, Ubuntu
+
+Virtual Box
+
+in terminal,
+use command: init 3 to switch to only-terminal mode.
+
+$ -> normal user
+# -> root user
+
+remote terminal -- SSH, VNC
+
+/ -> 根目录
+/root root用户的家目录
+/home/username 普通用户的家目录
+/etc 配置文件目录 - windows注册表
+/bin 命令目录
+/sbin 管理命令目录
+/usr/bin /usr/sbin 系统预装的其它命令
+
+
+init 0 --> shutdown
+
+帮助命令
+man -> 
+help , help cd, ls --help
+info 
+
+type cd -> 查看 cd 是内部命令还是外部命令
+
+man -a passwd
+man -> 9 chapters
+
+
+cd - : go back to the previous folder
+
+
+mkdir -p /a/b/c/d/e/f/...
+
+ls -R /a
+
+/tmp 临时文件
+
+cp -v from tp,  - 显示复制进度
+
+cat
+head, head -5 /tmp/demo
+tail, tail -f /tmp/demo, 实时追踪文件变化, log file
+wc: 统计文件信息
+wc
+
+/etc/ is often need to be backed up
+
+
+
+tar cf /tmp/etc-bakup.tar /etc
+
+gzip bzip2 to compress the file
+
+tar czf /tmp/etc-bkup.tar.gz /etc
+tar cjf /tmp/etc-bkup.tar.bz2 /etc
+
+tar xf XXX.tar -C /root
+tar zxf ...
+tar jxf ...
+
+
+vim:
+3yy 3dd
+y$ d$
+
+x: delete single character
+r: replace current caracter
+
+:set nu -> show line
+
+g + shaft+6 --> to the head of a line
+g + shaft+4 --> to the end  of a line
+
+
+************************************
+in vim command mode:
+:!+Linux_command can execute a linux command without close the current file
+************************************
+
+n -> next
+shift+n -> previous
+
+:%s/old/new/g, replace old to new in the whole file, g means global
+
+:3,5s/old/new/g, replace between line 3-5
+
+after enter vim, type "o" will insert on the next line
+
+
+visual mode
+    v - 字符可视模式
+    V - 行可视模式
+    ctrl+v - 块可视模式 (配合 d 和 I(大写i) 命令可以进行块的便利操作, 如python统一缩进 )
+        ctrl+v + I + twice esc
+
+
+用户和权限管理
+useradd newusername
+id newusername -> check is there a usr called newusername
+
+passwd newusername -> to update pass word of newuser
+
+passwd --> update your pass word
+userdel [-r] --> del a user, if -r is added, the /home/username folder will be delete
+usermod/ or change --> 修改用户属性
+
+man usermod
+
+usermod -d /home/newhomedir username
+
+groupadd newgroup
+
+usermod -g newgroup user1
+id user1
+
+su - user1
+
+su 切换用户
+sudo 以其他用户身份运行命令
+visudo 
+
+
+配置文件:
+1. /etc/passwd
+2. /etc/shadow -- passwd related
+3. /etc/group
+
+--> p=24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
