@@ -140,7 +140,57 @@ visudo
 
 --> p=24
 
+chmod
 
+p26 --> 网络管理
+1. 网络状态查看
+1.1. net-tools
+    ifconfig, route, netstat
+
+    eth0 - 第一块网卡
+    将不同名字的网卡转化为：eth0，方便批量管理大量网卡
+
+mii-tool eth0
+
+route -n
+
+ifconfig eth0 10.211.55.4 netmask 255.255.255.0
+
+ifup eth0
+ifdown eth0
+
+修改网关
+route del default gw 10.211.55.1
+route add default gw 10.211.55.2
+
+
+route add -host 10.0.0.1 gw 10.211.55.1
+访问 10.0.0.1 时专门走网关 10.211.55.1
+
+route add -net 192.168.0.0 netmask 255.255.255.0 gw 10.211.55.3
+访问一个网段时走一个专门的网关
+
+
+1.2. iproute2
+    ip, ss
+
+
+2. 网络配置
+
+3. 路由命令
+
+4. 网络故障排除
+ping traceroute mtr nslookup telnet tcpdump netstat ss
+
+traceroute -w 1 www.baidu.com
+
+
+5. 网络服务管理
+
+6. 常用网络配置文件
+
+
+p -> 32
 
 
 
