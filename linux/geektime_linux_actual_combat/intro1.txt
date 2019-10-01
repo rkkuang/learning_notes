@@ -100,11 +100,11 @@ shift+n -> previous
 after enter vim, type "o" will insert on the next line
 
 
-visual mode
-    v - 字符可视模式
-    V - 行可视模式
-    ctrl+v - 块可视模式 (配合 d 和 I(大写i) 命令可以进行块的便利操作, 如python统一缩进 )
-        ctrl+v + I + twice esc
+    visual mode
+        v - 字符可视模式
+        V - 行可视模式
+        ctrl+v - 块可视模式 (配合 d 和 I(大写i) 命令可以进行块的便利操作, 如python统一缩进 )
+            ctrl+v + I + twice esc
 
 
 用户和权限管理
