@@ -32,6 +32,6 @@ if __name__ == '__main__':
     # plt.axis('equal')
     plt.xlabel(r"$r\cos\theta$")
     plt.ylabel(r"$r\sin\theta$")
-    plt.title(r"Distribution of prime (r,$\theta$)s with $r=\theta$")
+    plt.title(r"Distribution of (r,$\theta$) with $r=\theta$ is prime number")
     plt.axis('square')
     plt.show()
