@@ -58,3 +58,49 @@ plt.show()
 mpl.rcParams[u'font.sans-serif'] = ['simhei'] 用simhei 字体显示中文
 mpl.rcParams['axes.unicode_minus'] = False 这个用来正常显示负号
 plt.title(u'名义GDP')这里的u 最好不要少
+
+
+
+
+
+
+
+
+plt.imshow(confusion_matrix_percent,cmap='gray')
+plt.colorbar()
+
+ plt.show()
+ 在上面的代码中，设置cmap=‘gray’，表示绘制灰度图，若需要绘制彩色图，可设置其它值,个人比较喜欢用 PRGn或者PRGn_r
+
+
+
+ cmap的候选值有
+
+ 'Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'BuGn', 'BuGn_r', 'BuPu', 'BuPu_r', 'CMRmap', 'CMRmap_r', 'Dark2', 'Dark2_r', 'GnBu', 'GnBu_r', 'Greens', 'Greens_r', 'Greys', 'Greys_r', 'OrRd', 'OrRd_r', 'Oranges', 'Oranges_r', 'PRGn', 'PRGn_r', 'Paired', 'Paired_r', 'Pastel1', 'Pastel1_r', 'Pastel2', 'Pastel2_r', 'PiYG', 'PiYG_r', 'PuBu', 'PuBuGn', 'PuBuGn_r', 'PuBu_r', 'PuOr', 'PuOr_r', 'PuRd', 'PuRd_r', 'Purples', 'Purples_r', 'RdBu', 'RdBu_r', 'RdGy', 'RdGy_r', 'RdPu', 'RdPu_r', 'RdYlBu', 'RdYlBu_r', 'RdYlGn', 'RdYlGn_r', 'Reds', 'Reds_r', 'Set1', 'Set1_r', 'Set2', 'Set2_r', 'Set3', 'Set3_r', 'Spectral', 'Spectral_r', 'Vega10', 'Vega10_r', 'Vega20', 'Vega20_r', 'Vega20b', 'Vega20b_r', 'Vega20c', 'Vega20c_r', 'Wistia', 'Wistia_r', 'YlGn', 'YlGnBu', 'YlGnBu_r', 'YlGn_r', 'YlOrBr', 'YlOrBr_r', 'YlOrRd', 'YlOrRd_r', 'afmhot', 'afmhot_r', 'autumn', 'autumn_r', 'binary', 'binary_r', 'bone', 'bone_r', 'brg', 'brg_r', 'bwr', 'bwr_r', 'cool', 'cool_r', 'coolwarm', 'coolwarm_r', 'copper', 'copper_r', 'cubehelix', 'cubehelix_r', 'flag', 'flag_r', 'gist_earth', 'gist_earth_r', 'gist_gray', 'gist_gray_r', 'gist_heat', 'gist_heat_r', 'gist_ncar', 'gist_ncar_r', 'gist_rainbow', 'gist_rainbow_r', 'gist_stern', 'gist_stern_r', 'gist_yarg', 'gist_yarg_r', 'gnuplot', 'gnuplot2', 'gnuplot2_r', 'gnuplot_r', 'gray', 'gray_r', 'hot', 'hot_r', 'hsv', 'hsv_r', 'inferno', 'inferno_r', 'jet', 'jet_r', 'magma', 'magma_r', 'nipy_spectral', 'nipy_spectral_r', 'ocean', 'ocean_r', 'pink', 'pink_r', 'plasma', 'plasma_r', 'prism', 'prism_r', 'rainbow', 'rainbow_r', 'seismic', 'seismic_r', 'spectral', 'spectral_r', 'spring', 'spring_r', 'summer', 'summer_r', 'tab10', 'tab10_r', 'tab20', 'tab20_r', 'tab20b', 'tab20b_r', 'tab20c', 'tab20c_r', 'terrain', 'terrain_r', 'viridis', 'viridis_r', 'winter', 'winter_r'
+
+high contrast colormap
+    #https://stackoverflow.com/questions/53101815/improve-color-contrast-in-matplotlib
+        # try one of the continuous colormaps, like viridis or gist_ncar. If you don't need all colors to be different, try one of the repeating maps like flag or prism
+
+
+
+https://stackoverflow.com/questions/36437584/how-to-set-xticks-and-yticks-with-my-imshow-plot
+You are missing the extent argument in imshow. imshow assumes that there is a linear relation between pixels and your "physical" unit. You could just use:
+
+plt.imshow(a11, cmap='hot', interpolation='nearest', extent=[0,88,0,8], origin='lower')
+The extent variable has to be given such that extent=[xmin,xmax,ymin,ymax]. The origin='lower' argument is to specify that your [0,0] coordinate has to be placed in the bottom left of the axis. Otherwise, it is placed in the top left of the axis.
+
+Finally, for showing only some particular ticks, you may want to use:
+
+ax = plt.gca()
+xticks = [0,8,16,24,32,40,48,56,64,72,80,88]
+yticks = [0,2,4,6,8]
+ax.xaxis.set_xticks(xticks)
+ax.xaxis.set_yticks(yticks)
+
+
+
+
+
+https://littleround.cn/2019/01/04/Python%E5%88%B6%E4%BD%9C%E5%8A%A8%E6%80%81%E5%9B%BE-matplotlib.animation/
+python animation
