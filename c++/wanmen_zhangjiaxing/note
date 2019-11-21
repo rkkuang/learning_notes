@@ -1,0 +1,44 @@
+1.4 
+Need:
+    Virtual Box
+    Win: MobaXTerm, Terminal (Mac/Linux)
+compilar: GCC, Glibc, GDB, Clang, LLDB
+editor: Emacs: Helm, TabNine
+
+other: git, Fish Shell
+
+2.1
+basic c++ grammar
+
+process of compile and execute of c++ code
+1. preprocessing
+2. compile
+3. link
+4. execute
+
+2.2 
+C/C++ 的计算机基础架构
+从 cpp 编译出来的是什么 Asm --> Bin
+指令运行的基础是什么
+为什么要这么做
+冯诺伊曼架构
+
+必读： 计算机体系结构，Hennessy，斯坦福校长
+
+2.3
+tools:
+1. preprocessing: cpp test.cpp --> test.i
+2. compilation: g++ -g -S test.i
+3. Assembly: 
+	as -o test.o test.s
+        gcc -g -c test.c; objdump -d -M intel -S test.o
+4.linker: ld -o myTest test.o
+
+
+
+
+
+
+
+
+
