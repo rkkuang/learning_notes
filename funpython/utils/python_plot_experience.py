@@ -1,5 +1,33 @@
 总结自 https://github.com/rkkuang/aeroastro/blob/master/clean/codes_v2/utils.py
 
+==========================================
+https://www.zhihu.com/question/21953954
+python如何调整子图的大小？
+
+grid = plt.GridSpec(2, 3, wspace=0.5, hspace=0.5)
+plt.subplot(grid[0,0])
+plt.subplot(grid[0,1:3])
+plt.subplot(grid[1,0:2])
+plt.subplot(grid[1,2])
+==========================================
+python 调整colorbar 大小
+srcplaneim = plt.imshow(XXXimg)
+add_colorbar(srcplaneim)
+
+from mpl_toolkits import axes_grid1
+def add_colorbar(im, aspect=20, pad_fraction=0.5, **kwargs):
+    """Add a vertical color bar to an image plot."""
+    divider = axes_grid1.make_axes_locatable(im.axes)
+    width = axes_grid1.axes_size.AxesY(im.axes, aspect=1./aspect)
+    pad = axes_grid1.axes_size.Fraction(pad_fraction, width)
+    current_ax = plt.gca()
+    cax = divider.append_axes("right", size=width, pad=pad)
+    plt.sca(current_ax)
+    return im.axes.figure.colorbar(im, cax=cax, **kwargs)
+
+
+
+
 1. imshow 显示图像，坐标轴刻度单位不想用像素，并用科学计数法表示，可以：
 
 from matplotlib.ticker import ScalarFormatter
