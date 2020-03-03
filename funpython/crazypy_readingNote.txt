@@ -1,0 +1,66 @@
+疯狂Python讲义 读书笔记
+
+Java 占据了世界上绝大部分电商、金融、通信等服务端应用开发，而C/C++占据了绝大部分贴近操作系统的硬件编程，这三门语言的地位难以动摇。
+
+python代码加密困难，不像编译型语言的源程序会被编译成目标程序，不过开源本是趋势
+
+无格式文本编辑器
+
+Sublime Text 可以集成 python 命令来运行python程序
+
+交互式解释器 -- 快速演练/测试-学习
+
+合理的代码注释占源代码的 1/3 左右
+
+print 函数会换行，是因为此函数的参数 end 的默认值为 "\n"
+print 还有 file 参数，默认为 sys.stdout
+
+xyz#abc 变量不合法，不允许出现 # 号
+
+import keyword
+print(keyword.kwlist)
+查看所有python关键字
+
+为提高数值的可读性，python3 允许为数值添加下划线作为分隔符
+如
+1_002 + 2_003
+
+复数的虚部用 j或J 表示
+
+dir 列出指定类或模块包含的全部内容，包括函数、方法、类、变量等
+dir(str)
+
+__XXX__ 私有方法，不希望被外部直接调用
+
+help(str.title)
+
+str类型不可变，类似tuple
+
+为函数提供文档
+help(my_func)
+print(my_func.__doc__)
+
+P138
+python没有真正的隐藏机制
+__hide()
+实际为：
+u._User__hide()
+
+pip show numpy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
